@@ -10,11 +10,25 @@ using System.Windows.Forms;
 
 namespace Part_8_Hangman
 {
-    public partial class Form1 : Form
+    public partial class frmHangman : Form
     {
-        public Form1()
+        string secretWord;
+        string displayWord;
+        int guesses;
+
+        public frmHangman()
         {
             InitializeComponent();
+            secretWord = "COMPUTER";
+            displayWord = "--------";
+            guesses = 0;
+        }
+
+        private void btnGuess_Click(object sender, EventArgs e)
+        {
+            string guessedLetter = txtGuess.Text.ToUpper();
+
+            
         }
     }
 }
