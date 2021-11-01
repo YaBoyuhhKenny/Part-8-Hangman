@@ -15,20 +15,91 @@ namespace Part_8_Hangman
         string secretWord;
         string displayWord;
         int guesses;
-
+        int lives;
         public frmHangman()
         {
             InitializeComponent();
-            secretWord = "COMPUTER";
+            secretWord = "SAVATHUN";
             displayWord = "--------";
             guesses = 0;
+            lives = 3;
+            lblLives.Text = $"lives:{lives}";
         }
 
         private void btnGuess_Click(object sender, EventArgs e)
         {
             string guessedLetter = txtGuess.Text.ToUpper();
 
-            
+            guesses += 1;
+
+            if(guessedLetter.IndexOf("S") == 0)
+            {
+                int index = secretWord.IndexOf("S");
+                displayWord = displayWord.Remove(index, 1);
+                displayWord = displayWord.Insert(index, guessedLetter);
+                lblWord.Text = displayWord;
+            }
+
+            else if (guessedLetter.IndexOf("A") == 0)
+            {
+                int index = secretWord.IndexOf("A");
+                displayWord = displayWord.Remove(index, 1);
+                displayWord = displayWord.Insert(index, guessedLetter);
+                lblWord.Text = displayWord;
+
+                int index2 = secretWord.LastIndexOf("A");
+                displayWord = displayWord.Remove(index2, 1);
+                displayWord = displayWord.Insert(index2, guessedLetter);
+                lblWord.Text = displayWord;
+            }
+
+            else if (guessedLetter.IndexOf("V") == 0)
+            {
+                int index = secretWord.IndexOf("V");
+                displayWord = displayWord.Remove(index, 1);
+                displayWord = displayWord.Insert(index, guessedLetter);
+                lblWord.Text = displayWord;
+            }
+
+            else if (guessedLetter.IndexOf("H") == 0)
+            {
+                int index = secretWord.IndexOf("H");
+                displayWord = displayWord.Remove(index, 1);
+                displayWord = displayWord.Insert(index, guessedLetter);
+                lblWord.Text = displayWord;
+            }
+
+            else if (guessedLetter.IndexOf("U") == 0)
+            {
+                int index = secretWord.IndexOf("U");
+                displayWord = displayWord.Remove(index, 1);
+                displayWord = displayWord.Insert(index, guessedLetter);
+                lblWord.Text = displayWord;
+            }
+
+            else if (guessedLetter.IndexOf("T") == 0)
+            {
+                int index = secretWord.IndexOf("T");
+                displayWord = displayWord.Remove(index, 1);
+                displayWord = displayWord.Insert(index, guessedLetter);
+                lblWord.Text = displayWord;
+            }
+
+            else if (guessedLetter.IndexOf("N") == 0)
+            {
+                int index = secretWord.IndexOf("N");
+                displayWord = displayWord.Remove(index, 1);
+                displayWord = displayWord.Insert(index, guessedLetter);
+                lblWord.Text = displayWord;
+            }
+
+
+            else
+            { 
+                lives -= 1;
+                lblLives.Text = $"lives:{lives}";
+                lstGuessedLetters.Items.Add(guessedLetter);
+            }
         }
     }
 }
