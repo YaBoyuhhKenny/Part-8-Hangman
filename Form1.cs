@@ -24,6 +24,10 @@ namespace Part_8_Hangman
             guesses = 0;
             lives = 3;
             lblLives.Text = $"lives:{lives}";
+            imgfull.Visible = false;
+            imgHangmanTwoThirds.Visible = false;
+            imgHangmanOneThird.Visible = false;
+            imgHangmanBase.Visible = true;
         }
 
         private void btnGuess_Click(object sender, EventArgs e)
@@ -95,10 +99,28 @@ namespace Part_8_Hangman
 
 
             else
-            { 
+            {
+                imgHangmanBase.Visible = false;
                 lives -= 1;
                 lblLives.Text = $"lives:{lives}";
                 lstGuessedLetters.Items.Add(guessedLetter);
+
+                if(lives == 2)
+                {
+                    imgHangmanOneThird.Visible = true;
+                }
+
+                if (lives == 1)
+                {
+                    imgHangmanOneThird.Visible = false;
+                    imgHangmanTwoThirds.Visible = true;
+                }
+                if (lives == 0)
+                {
+                    imgHangmanTwoThirds.Visible = false;
+                    imgfull.Visible = true;
+                    lblTitle.Text = "Game over";
+                }
             }
         }
     }

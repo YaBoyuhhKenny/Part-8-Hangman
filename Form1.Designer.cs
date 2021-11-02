@@ -36,13 +36,21 @@
             this.lstGuessedLetters = new System.Windows.Forms.ListBox();
             this.lblLetters = new System.Windows.Forms.Label();
             this.lblLives = new System.Windows.Forms.Label();
+            this.imgHangmanBase = new System.Windows.Forms.PictureBox();
+            this.imgHangmanOneThird = new System.Windows.Forms.PictureBox();
+            this.imgHangmanTwoThirds = new System.Windows.Forms.PictureBox();
+            this.imgfull = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHangmanBase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHangmanOneThird)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHangmanTwoThirds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgfull)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblTitle.Location = new System.Drawing.Point(124, 2);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(238, 52);
@@ -63,6 +71,7 @@
             // 
             this.lblInstructions.AutoSize = true;
             this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblInstructions.Location = new System.Drawing.Point(97, 54);
             this.lblInstructions.Name = "lblInstructions";
             this.lblInstructions.Size = new System.Drawing.Size(330, 36);
@@ -81,6 +90,7 @@
             // btnGuess
             // 
             this.btnGuess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuess.ForeColor = System.Drawing.Color.Black;
             this.btnGuess.Location = new System.Drawing.Point(100, 313);
             this.btnGuess.Name = "btnGuess";
             this.btnGuess.Size = new System.Drawing.Size(59, 29);
@@ -91,7 +101,9 @@
             // 
             // lstGuessedLetters
             // 
+            this.lstGuessedLetters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lstGuessedLetters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstGuessedLetters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lstGuessedLetters.FormattingEnabled = true;
             this.lstGuessedLetters.ItemHeight = 16;
             this.lstGuessedLetters.Location = new System.Drawing.Point(35, 175);
@@ -103,6 +115,7 @@
             // 
             this.lblLetters.AutoSize = true;
             this.lblLetters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLetters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblLetters.Location = new System.Drawing.Point(31, 152);
             this.lblLetters.Name = "lblLetters";
             this.lblLetters.Size = new System.Drawing.Size(113, 20);
@@ -117,12 +130,57 @@
             this.lblLives.Size = new System.Drawing.Size(0, 13);
             this.lblLives.TabIndex = 8;
             // 
+            // imgHangmanBase
+            // 
+            this.imgHangmanBase.BackgroundImage = global::Part_8_Hangman.Properties.Resources.hangman4;
+            this.imgHangmanBase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgHangmanBase.Location = new System.Drawing.Point(196, 113);
+            this.imgHangmanBase.Name = "imgHangmanBase";
+            this.imgHangmanBase.Size = new System.Drawing.Size(181, 243);
+            this.imgHangmanBase.TabIndex = 12;
+            this.imgHangmanBase.TabStop = false;
+            // 
+            // imgHangmanOneThird
+            // 
+            this.imgHangmanOneThird.BackgroundImage = global::Part_8_Hangman.Properties.Resources.hangman3;
+            this.imgHangmanOneThird.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgHangmanOneThird.Location = new System.Drawing.Point(196, 113);
+            this.imgHangmanOneThird.Name = "imgHangmanOneThird";
+            this.imgHangmanOneThird.Size = new System.Drawing.Size(181, 243);
+            this.imgHangmanOneThird.TabIndex = 11;
+            this.imgHangmanOneThird.TabStop = false;
+            // 
+            // imgHangmanTwoThirds
+            // 
+            this.imgHangmanTwoThirds.BackgroundImage = global::Part_8_Hangman.Properties.Resources.hangman2;
+            this.imgHangmanTwoThirds.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgHangmanTwoThirds.Location = new System.Drawing.Point(196, 113);
+            this.imgHangmanTwoThirds.Name = "imgHangmanTwoThirds";
+            this.imgHangmanTwoThirds.Size = new System.Drawing.Size(181, 243);
+            this.imgHangmanTwoThirds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgHangmanTwoThirds.TabIndex = 10;
+            this.imgHangmanTwoThirds.TabStop = false;
+            // 
+            // imgfull
+            // 
+            this.imgfull.BackgroundImage = global::Part_8_Hangman.Properties.Resources.hangman;
+            this.imgfull.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgfull.Location = new System.Drawing.Point(196, 113);
+            this.imgfull.Name = "imgfull";
+            this.imgfull.Size = new System.Drawing.Size(181, 243);
+            this.imgfull.TabIndex = 9;
+            this.imgfull.TabStop = false;
+            // 
             // frmHangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(510, 467);
+            this.Controls.Add(this.imgHangmanBase);
+            this.Controls.Add(this.imgHangmanOneThird);
+            this.Controls.Add(this.imgHangmanTwoThirds);
+            this.Controls.Add(this.imgfull);
             this.Controls.Add(this.lblLives);
             this.Controls.Add(this.lblLetters);
             this.Controls.Add(this.lstGuessedLetters);
@@ -133,6 +191,10 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "frmHangman";
             this.Text = "Hang Man";
+            ((System.ComponentModel.ISupportInitialize)(this.imgHangmanBase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHangmanOneThird)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHangmanTwoThirds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgfull)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,6 +210,10 @@
         private System.Windows.Forms.Label lblLetters;
         private System.Windows.Forms.TextBox txtGuess;
         private System.Windows.Forms.Label lblLives;
+        private System.Windows.Forms.PictureBox imgfull;
+        private System.Windows.Forms.PictureBox imgHangmanTwoThirds;
+        private System.Windows.Forms.PictureBox imgHangmanOneThird;
+        private System.Windows.Forms.PictureBox imgHangmanBase;
     }
 }
 
